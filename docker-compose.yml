@@ -1,0 +1,5 @@
+# Dockerfile
+FROM jekyll/jekyll:4.2.0
+COPY . /srv/jekyll
+RUN chmod 777 /srv/jekyll
+CMD ["jekyll", "serve", "--livereload", "--host", "0.0.0.0"]
