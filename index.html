@@ -3,190 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedanshi Samant | DevOps Portfolio</title>
+    <title>Vedanshi Samant | Docker Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #4F46E5;
-            --secondary: #10B981;
-            --dark: #1F2937;
-            --light: #F3F4F6;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--dark);
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .project-image {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--dark);
-            color: white;
-        }
-        
-        /* Interactive elements */
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary);
-            color: white;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #4338CA;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
-        <h1>Vedanshi Samant</h1>
-        <p>Cloud Computing Enthusiast | Learning Devops  | Containerization and Automation</p>
+        <div class="container">
+            <h1>Vedanshi Samant</h1>
+            <p>DevOps Engineer | Docker Specialist</p>
+        </div>
     </header>
-    
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my DevOps portfolio! I specialize in containerization, CI/CD pipelines, and cloud infrastructure.</p>
-        </section>
-        
+
+    <main class="container">
         <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400?text=Microservices')"></div>
-                    <div class="project-content">
-                        <h3>Microservices Orchestration</h3>
-                        <p>Docker Compose implementation with multiple interconnected services.</p>
-                        <a href="https://github.com/vedanschi/DockerOps/tree/main/projects/flask-mysql" class="btn">View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400?text=CI/CD')"></div>
-                    <div class="project-content">
-                        <h3>CI/CD Pipeline</h3>
-                        <p>Automated testing and deployment with GitHub Actions.</p>
-                        <a href="https://github.com/vedanschi/DockerOps/tree/main/.github/workflows" class="btn">View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400?text=Monitoring')"></div>
-                    <div class="project-content">
-                        <h3>Container Monitoring</h3>
-                        <p>Prometheus + Grafana dashboard for container metrics.</p>
-                        <a href="#" class="btn">Coming Soon</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/600x400?text=Serverless')"></div>
-                    <div class="project-content">
-                        <h3>Serverless Containers</h3>
-                        <p>AWS Fargate implementation with Terraform.</p>
-                        <a href="#" class="btn">Coming Soon</a>
-                    </div>
-                </div>
+            <h2><i class="fab fa-docker"></i> Docker Projects</h2>
+            <div class="project-grid" id="projectContainer">
+                <!-- Projects injected by JavaScript -->
             </div>
         </section>
-    </div>
-    
+    </main>
+
     <footer>
-        <p>&copy; 2023 Vedanshi Samant. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/vedanschi" style="color: white; margin: 0 10px;">GitHub</a>
-            <a href="#" style="color: white; margin: 0 10px;">LinkedIn</a>
-            <a href="#" style="color: white; margin: 0 10px;">Twitter</a>
-        </div>
+        <p>© 2023 Vedanshi Samant | <a href="https://github.com/vedanschi">GitHub</a></p>
     </footer>
 
-    <script>
-        // Interactive elements
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.tagName !== 'A') {
-                    const link = card.querySelector('a');
-                    if (link) window.location = link.href;
-                }
-            });
-        });
-    </script>
-    <script>
-    // Animate project cards on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.style.opacity = 0;
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease';
-        observer.observe(card);
-    });
-
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
