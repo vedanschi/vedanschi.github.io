@@ -11,7 +11,7 @@ const projects = [
     id: 2,
     title: "Streamlit Dev Environment",
     description: "Containerized Streamlit app for data visualization",
-    url: "https://github.com/vedanschi/DockerOps/tree/main/2.%20Dockerized%20Streamlit%20Development%20Environment",
+    url: "http://localhost:8501/",
     technologies: ["Python", "Streamlit", "Docker"]
   },
   {
